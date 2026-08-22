@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyasdheen T | Portfolio</title>
+    <meta name="description" content="Portfolio of Riyasdheen T — BCA Graduate, Full-Stack Developer specializing in Web Applications, Report Generation Systems, and Library Management Systems.">
+    <meta name="keywords" content="Riyasdheen, Portfolio, Web Developer, BCA, Full Stack Developer, K.S. Rangasamy College of Technology">
+    <meta name="author" content="Riyasdheen T">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>RT<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="greeting-line"></span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-first">Riyasdheen</span>
+                    <span class="name-last">T</span>
+                </h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-prefix">I'm a</span>
+                    <span class="hero-title" id="typedText"></span>
+                    <span class="typed-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Passionate developer crafting digital experiences with modern technologies. 
+                    Specializing in building robust web applications and innovative solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/riyazmohammad4020-ai" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:riyazmohammad4020@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+919585654094" class="social-link" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container">
+                    <div class="image-ring ring-1"></div>
+                    <div class="image-ring ring-2"></div>
+                    <div class="image-ring ring-3"></div>
+                    <div class="hero-image-glow"></div>
+                    <img src="assets/profile.png" alt="Riyasdheen T - Portfolio Photo" class="hero-image">
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="fas fa-code"></i>
+                    <span>Developer</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>BCA & MCA</span>
+                </div>
+                <div class="floating-badge badge-3">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>6+ Projects</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm <strong>Riyasdheen T</strong>, a passionate and driven software developer with a strong foundation 
+                        in computer science. I hold a <strong>Bachelor of Computer Applications (BCA)</strong> degree and am 
+                        currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at 
+                        <strong>K.S. Rangasamy College of Technology</strong>.
+                    </p>
+                    <p class="about-text">
+                        I specialize in building web applications that solve real-world problems. From automating 
+                        <strong>fabric inspection report generation</strong> to developing comprehensive 
+                        <strong>library management systems</strong> and <strong>chat applications</strong>, I bring ideas to life with clean, 
+                        efficient code and modern design principles.
+                    </p>
+                    <p class="about-text">
+                        My goal is to leverage technology to create impactful solutions while continuously expanding 
+                        my skill set in full-stack development, AI integration, and cloud deployment.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Deployments</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info-cards">
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Riyasdheen T</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">riyazmohammad4020@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">+91 9585654094</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Degree</span>
+                            <span class="info-value">BCA | MCA (Pursuing)</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Availability</span>
+                            <span class="info-value available">Open to Work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #E44D26;">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90" style="--skill-color: #E44D26;"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #1572B6;">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85" style="--skill-color: #1572B6;"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #F7DF1E;">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80" style="--skill-color: #F7DF1E;"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #5382A1;">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3 class="skill-name">Java</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75" style="--skill-color: #5382A1;"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #A8B9CC;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-name">C Programming</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="70" style="--skill-color: #A8B9CC;"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #FFCA28;">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="skill-name">Firebase</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75" style="--skill-color: #FFCA28;"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #3776AB;">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="70" style="--skill-color: #3776AB;"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon" style="--skill-color: #F05032;">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3 class="skill-name">Git & GitHub</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80" style="--skill-color: #F05032;"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+                <p class="section-subtitle">Academic journey & qualifications</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge current">Currently Pursuing</div>
+                        <h3 class="timeline-title">Master of Computer Applications (MCA)</h3>
+                        <h4 class="timeline-institution">
+                            <i class="fas fa-university"></i>
+                            K.S. Rangasamy College of Technology
+                        </h4>
+                        <p class="timeline-description">
+                            Pursuing advanced studies in Computer Applications with focus on software engineering, 
+                            advanced algorithms, AI/ML, and enterprise application development.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Software Engineering</span>
+                            <span class="tag">AI / ML</span>
+                            <span class="tag">Cloud Computing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-badge completed">Completed</div>
+                        <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+                        <h4 class="timeline-institution">
+                            <i class="fas fa-university"></i>
+                            Undergraduate Program
+                        </h4>
+                        <p class="timeline-description">
+                            Completed Bachelor's degree with strong fundamentals in programming, database management, 
+                            web technologies, data structures, and software development methodologies.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Programming</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">DBMS</span>
+                            <span class="tag">Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Things I've built & deployed</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Fabric Inspection Report -->
+                <div class="project-card featured">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://fabric-inspection-report.web.app" target="_blank" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/riyazmohammad4020-ai/Report-builder" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i> Featured
+                    </div>
+                    <h3 class="project-title">Fabric Inspection Report Generator</h3>
+                    <p class="project-description">
+                        A comprehensive web application for generating detailed fabric inspection reports. 
+                        Features automated report creation, data visualization, and export functionalities. 
+                        Deployed on Firebase hosting for seamless access.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Web App</span>
+                    </div>
+                    <a href="https://fabric-inspection-report.web.app" target="_blank" class="project-cta">
+                        View Live <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2: Online Library Management -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/riyazmohammad4020-ai" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Online Library Management System</h3>
+                    <p class="project-description">
+                        A full-featured library management system with book cataloging, user management, 
+                        borrowing/returning workflows, search functionality, and inventory tracking. 
+                        Built for efficient digital library operations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Database</span>
+                        <span class="tech-tag">CRUD</span>
+                        <span class="tech-tag">Full Stack</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Chat Application -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/riyazmohammad4020-ai/chat-application-17-riyasdheen" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AI Chat Application</h3>
+                    <p class="project-description">
+                        A real-time chat application with AI-powered features. Supports instant messaging, 
+                        user authentication, and intelligent response generation using modern AI integration.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">AI Integration</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Tamil Nadu Auto Drivers -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/riyazmohammad4020-ai/tamilnadu-auto-drivers" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Tamil Nadu Auto Drivers Platform</h3>
+                    <p class="project-description">
+                        A platform designed to connect auto-rickshaw drivers with passengers in Tamil Nadu. 
+                        Features driver registration, booking system, and location-based services.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Web Platform</span>
+                        <span class="tech-tag">Location API</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: C Programming Projects -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/riyazmohammad4020-ai/Cprogram" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">C Programming Collection</h3>
+                    <p class="project-description">
+                        A curated collection of C programming exercises and projects covering fundamental 
+                        concepts including data structures, algorithms, file handling, and system programming.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Algorithms</span>
+                        <span class="tech-tag">Data Structures</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Report Build -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/riyazmohammad4020-ai/Report-build" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Report Builder Application</h3>
+                    <p class="project-description">
+                        An advanced report building tool designed for streamlined data reporting. 
+                        Features customizable templates, data import, and automated formatting for professional output.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Reporting</span>
+                        <span class="tech-tag">Templates</span>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <a href="https://github.com/riyazmohammad4020-ai" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    <span>View All on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Let's Connect</h3>
+                    <p class="contact-info-text">
+                        I'm always open to discussing new projects, creative ideas, or opportunities 
+                        to be part of something amazing. Feel free to reach out!
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:riyazmohammad4020@gmail.com" class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">riyazmohammad4020@gmail.com</span>
+                            </div>
+                            <i class="fas fa-arrow-right contact-card-arrow"></i>
+                        </a>
+                        <a href="tel:+919585654094" class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Phone</span>
+                                <span class="contact-card-value">+91 9585654094</span>
+                            </div>
+                            <i class="fas fa-arrow-right contact-card-arrow"></i>
+                        </a>
+                        <a href="https://github.com/riyazmohammad4020-ai" target="_blank" class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">GitHub</span>
+                                <span class="contact-card-value">riyazmohammad4020-ai</span>
+                            </div>
+                            <i class="fas fa-arrow-right contact-card-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-input" placeholder="Project Inquiry" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-input form-textarea" placeholder="Your message here..." rows="4" required></textarea>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>RT<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Built by <strong>Riyasdheen T</strong></p>
+                <div class="footer-socials">
+                    <a href="https://github.com/riyazmohammad4020-ai" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:riyazmohammad4020@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+919585654094" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+                <p class="footer-copyright">&copy; 2026 Riyasdheen T. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
