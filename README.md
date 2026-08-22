@@ -3,7 +3,7 @@
 A modern, premium portfolio website showcasing my projects, skills, and experience.
 
 ## 🚀 Live Demo
-Visit: [https://riyazmohammad4020-ai.github.io/portfolio/](https://riyazmohammad4020-ai.github.io/portfolio/)
+Visit: [https://riyazmohammad4020-ai.github.io/port-folio/](https://riyazmohammad4020-ai.github.io/port-folio/)
 
 ## 🛠️ Built With
 - HTML5
