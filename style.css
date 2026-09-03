@@ -1187,27 +1187,62 @@ ul {
     font-weight: 500;
 }
 
+.project-url-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 8px;
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+    word-break: break-all;
+}
+
+.project-url-box i {
+    color: var(--accent-secondary);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.project-url-box a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-url-box a:hover {
+    text-decoration: underline;
+}
+
 .project-cta {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    color: var(--accent-primary);
+    padding: 12px 20px;
+    background: var(--gradient-primary);
+    color: #ffffff !important;
+    border-radius: 12px;
     font-size: 0.9rem;
     font-weight: 600;
     transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.25);
+    width: 100%;
+    margin-top: auto;
+    text-decoration: none;
 }
 
 .project-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(108, 99, 255, 0.45);
     gap: 12px;
 }
 
 .project-cta i {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     transition: var(--transition);
-}
-
-.project-cta:hover i {
-    transform: translateX(4px);
 }
 
 .projects-cta {
